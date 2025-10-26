@@ -88,7 +88,7 @@ namespace graphic_editor
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            pen.Color = ((Button)sender).BackColor;
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -126,6 +126,11 @@ namespace graphic_editor
                 pictureBox1.Image = map;
                 arrayPoints.SetPoint(e.X, e.Y);
             }
+        }
+
+        private void button3click(object sender, EventArgs e)
+        {
+
         }
     }
 }
