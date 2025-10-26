@@ -93,7 +93,11 @@ namespace graphic_editor
 
         private void button18_Click(object sender, EventArgs e)
         {
-
+            if (colorDialog1.ShowDialog() == DialogResult.OK) 
+            { 
+                pen.Color = colorDialog1.Color;
+                ((Button)sender).BackColor = colorDialog1.Color;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
