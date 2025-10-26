@@ -76,6 +76,9 @@ namespace graphic_editor
             Rectangle rectangle = Screen.PrimaryScreen.Bounds;
             map = new Bitmap(rectangle.Width, rectangle.Height);
             graphics = Graphics.FromImage(map);
+
+            pen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
+            pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
         }
 
         private void button1_Click(object sender, EventArgs e)
