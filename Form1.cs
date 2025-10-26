@@ -16,6 +16,7 @@ namespace graphic_editor
         public MainForm()
         {
             InitializeComponent();
+            SetSize();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -64,6 +65,19 @@ namespace graphic_editor
             }
         }
 
+        private ArrayPoints arrayPoints = new ArrayPoints(2);
+
+        Bitmap map = new Bitmap(100, 100);
+        Graphics graphics;
+        Pen pen = new Pen(Color.Black, 3f);
+
+        private void SetSize()
+        {
+            Rectangle rectangle = Screen.PrimaryScreen.Bounds;
+            map = new Bitmap(rectangle.Width, rectangle.Height);
+            graphics = Graphics.FromImage(map);
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -93,11 +107,22 @@ namespace graphic_editor
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
             isMouse = false;
+            arrayPoints.ResetPoints();
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-
+            if (!isMouse)
+            {
+                return;
+            }
+            arrayPoints.SetPoint(e.X, e.Y);
+            if(arrayPoints.GetCountOfPoints() >= 2)
+            {
+                graphics.DrawLines(pen, arrayPoints.GetPoints());
+                pictureBox1.Image = map;
+                arrayPoints.SetPoint(e.X, e.Y);
+            }
         }
     }
 }
