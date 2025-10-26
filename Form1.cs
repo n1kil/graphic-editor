@@ -83,7 +83,8 @@ namespace graphic_editor
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            graphics.Clear(pictureBox1.BackColor);
+            pictureBox1.Image = map;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -133,6 +134,31 @@ namespace graphic_editor
         }
 
         private void button3click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            pen.Width = trackBar1.Value;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
