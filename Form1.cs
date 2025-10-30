@@ -162,5 +162,10 @@ namespace graphic_editor
         {
 
         }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            pen.Color = pictureBox1.BackColor;
+        }
     }
 }
