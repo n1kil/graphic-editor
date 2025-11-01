@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -48,13 +49,19 @@
             this.button16 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button17 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -115,6 +122,7 @@
             this.flowLayoutPanel1.Controls.Add(this.button16);
             this.flowLayoutPanel1.Controls.Add(this.button18);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -294,8 +302,20 @@
             this.panel1.Size = new System.Drawing.Size(174, 132);
             this.panel1.TabIndex = 20;
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 249);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 47);
+            this.flowLayoutPanel2.TabIndex = 21;
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button23);
+            this.panel2.Controls.Add(this.button22);
+            this.panel2.Controls.Add(this.button21);
+            this.panel2.Controls.Add(this.button20);
+            this.panel2.Controls.Add(this.button19);
             this.panel2.Controls.Add(this.button17);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button1);
@@ -307,6 +327,66 @@
             this.panel2.Size = new System.Drawing.Size(194, 450);
             this.panel2.TabIndex = 4;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // button22
+            // 
+            this.button22.AutoSize = true;
+            this.button22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button22.BackgroundImage")));
+            this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button22.Location = new System.Drawing.Point(118, 274);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(50, 50);
+            this.button22.TabIndex = 10;
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // button21
+            // 
+            this.button21.AutoSize = true;
+            this.button21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button21.BackgroundImage")));
+            this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button21.Location = new System.Drawing.Point(62, 274);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(50, 50);
+            this.button21.TabIndex = 9;
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button20
+            // 
+            this.button20.AutoSize = true;
+            this.button20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button20.BackgroundImage")));
+            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button20.Location = new System.Drawing.Point(6, 274);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(50, 50);
+            this.button20.TabIndex = 8;
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button19
+            // 
+            this.button19.AutoSize = true;
+            this.button19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button19.BackgroundImage")));
+            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button19.Location = new System.Drawing.Point(62, 218);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(50, 50);
+            this.button19.TabIndex = 7;
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button17
+            // 
+            this.button17.AutoSize = true;
+            this.button17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button17.BackgroundImage")));
+            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button17.Location = new System.Drawing.Point(8, 218);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(50, 50);
+            this.button17.TabIndex = 5;
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // panel3
             // 
@@ -337,15 +417,17 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button17
+            // button23
             // 
-            this.button17.Location = new System.Drawing.Point(59, 218);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(75, 23);
-            this.button17.TabIndex = 5;
-            this.button17.Text = "Ластик";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.button23.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            this.button23.Location = new System.Drawing.Point(118, 218);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(50, 50);
+            this.button23.TabIndex = 11;
+            this.button23.Text = "Выбрать фигуру";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // MainForm
             // 
@@ -360,6 +442,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
@@ -396,6 +479,12 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button23;
     }
 }
 
